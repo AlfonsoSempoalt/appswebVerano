@@ -1,11 +1,14 @@
 package dominio;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,20 +19,36 @@ public class Estado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idestado")
-    private Long id;
+    private Long idestado;
 
     @Column(name = "nombre", nullable = false)
     private String nombre;
-
+    
+    @OneToMany(mappedBy = "estado",cascade = CascadeType.ALL)
+    private List<Municipio> municipios;
+    
     public Estado() {
     }
 
-    public Long getId() {
-        return id;
+    public Estado(String nombre, List<Municipio> municipios) {
+        this.nombre = nombre;
+        this.municipios = municipios;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getIdestado() {
+        return idestado;
+    }
+
+    public void setIdestado(Long idestado) {
+        this.idestado = idestado;
+    }
+
+    public List<Municipio> getMunicipios() {
+        return municipios;
+    }
+
+    public void setMunicipios(List<Municipio> municipios) {
+        this.municipios = municipios;
     }
 
     public String getNombre() {
@@ -39,11 +58,11 @@ public class Estado implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idestado != null ? idestado.hashCode() : 0);
         return hash;
     }
 
@@ -54,7 +73,7 @@ public class Estado implements Serializable {
             return false;
         }
         Estado other = (Estado) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.idestado == null && other.idestado != null) || (this.idestado != null && !this.idestado.equals(other.idestado))) {
             return false;
         }
         return true;
@@ -62,7 +81,7 @@ public class Estado implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Estado[ id=" + id + " ]";
+        return "Estado{" + "id=" + idestado + ", nombre=" + nombre + '}';
     }
 
 }
