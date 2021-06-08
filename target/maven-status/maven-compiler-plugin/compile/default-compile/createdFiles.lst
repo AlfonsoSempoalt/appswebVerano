@@ -1,7 +1,10 @@
-daos\ComentarioDao.class
-objetosNegocio\Comentario.class
-objetosNegocio\Estado.class
-daos\UsuarioDao.class
-objetosNegocio\Post.class
-objetosNegocio\Municipio.class
-objetosNegocio\Usuario.class
+dominio\Estado.class
+dominio\Comentario.class
+dominio\Post_.class
+dominio\Comentario_.class
+dominio\Post.class
+dominio\Anclado.class
+dominio\Comun_.class
+dominio\Comun.class
+dominio\Anclado_.class
+dominio\Estado_.class
