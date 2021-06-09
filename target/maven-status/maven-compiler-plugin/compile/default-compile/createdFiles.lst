@@ -1,0 +1,7 @@
+daos\ComentarioDao.class
+objetosNegocio\Comentario.class
+objetosNegocio\Estado.class
+daos\UsuarioDao.class
+objetosNegocio\Post.class
+objetosNegocio\Municipio.class
+objetosNegocio\Usuario.class
