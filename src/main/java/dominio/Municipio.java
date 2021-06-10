@@ -36,10 +36,10 @@ public class Municipio implements Serializable {
     private String nombre;
 
     @ManyToOne(optional = false, targetEntity = Estado.class)
-    @JoinColumn(name = "idestado", nullable = false)
+    @JoinColumn(name = "idestado", nullable = true)
     private Estado estado;
     
-    @OneToMany(mappedBy = "idusuario",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ciudad",cascade = CascadeType.ALL)
     private List<Usuario> usuarios;
     
     public Municipio() {

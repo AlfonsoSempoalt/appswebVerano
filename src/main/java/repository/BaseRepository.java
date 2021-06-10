@@ -29,4 +29,5 @@ public abstract class BaseRepository<T> {
         EntityManager entityManager = managerFactory.createEntityManager();
         return entityManager;
     }
+    
 }

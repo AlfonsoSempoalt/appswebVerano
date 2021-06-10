@@ -5,6 +5,7 @@
  */
 package dominio;
 
+import dominio.enums.Genero;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -28,9 +29,8 @@ public class Normal extends Usuario implements Serializable {
     }
 
     public Normal(List<Comentario> comentarios, String nombreCompleto, String email, String contrasenia
-            , String telefono, Byte[] avatar, Municipio ciudad, Date fechaNacimiento, Genero genero
-            , List<Comun> comunes) {
-        
+            , String telefono, byte[] avatar, Municipio ciudad, Date fechaNacimiento, Genero genero
+            , List<Comun> comunes) {   
         super(nombreCompleto, email, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, comunes);
         this.comentarios = comentarios;
     }

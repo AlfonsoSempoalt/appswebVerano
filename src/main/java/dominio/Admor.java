@@ -5,15 +5,13 @@
  */
 package dominio;
 
+import dominio.enums.Genero;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 /**
@@ -30,7 +28,7 @@ public class Admor extends Usuario implements Serializable {
     public Admor() {
     }
 
-    public Admor(List<Anclado> anclados, String nombreCompleto, String email, String contrasenia, String telefono, Byte[] avatar, Municipio ciudad, Date fechaNacimiento, Genero genero, List<Comun> comunes) {
+    public Admor(List<Anclado> anclados, String nombreCompleto, String email, String contrasenia, String telefono, byte[] avatar, Municipio ciudad, Date fechaNacimiento, Genero genero, List<Comun> comunes) {
         super(nombreCompleto, email, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, comunes);
         this.anclados = anclados;
     }

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio.fabricas;
+package dominio.enums;
 
 /**
  *
  * @author Alfon
  */
-public enum TiposUsuarios {
-    ADMIN,
-    NORMAL
+public enum Genero {
+    HOMBRE,
+    MUJER
 }

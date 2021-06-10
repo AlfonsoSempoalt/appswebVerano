@@ -46,9 +46,6 @@ public class Comentario implements Serializable {
     @JoinColumn(name = "idcomun", nullable = false)
     private Comun comun;
 
-    @Column(name = "subComentarios", nullable = false)
-    private List<Comentario> subComentarios;
-
     @ManyToOne(targetEntity = Normal.class, optional = false)
     @JoinColumn(name = "idusuario",nullable = false)
     private Normal normal;
@@ -56,20 +53,18 @@ public class Comentario implements Serializable {
     public Comentario() {
     }
 
-    public Comentario(Date fechaHora, String contenido, Comun comun, List<Comentario> subComentarios, Normal normal) {
+    public Comentario(Date fechaHora, String contenido, Comun comun, Normal normal) {
         this.fechaHora = fechaHora;
         this.contenido = contenido;
         this.comun = comun;
-        this.subComentarios = subComentarios;
         this.normal = normal;
     }
 
-    public Comentario(Long id, Date fechaHora, String contenido, Comun comun, List<Comentario> comentarios) {
+    public Comentario(Long id, Date fechaHora, String contenido, Comun comun) {
         this.id = id;
         this.fechaHora = fechaHora;
         this.contenido = contenido;
         this.comun = comun;
-        this.subComentarios = comentarios;
     }
 
     public Long getId() {
@@ -104,14 +99,6 @@ public class Comentario implements Serializable {
         this.comun = comun;
     }
 
-    public List<Comentario> getSubComentarios() {
-        return subComentarios;
-    }
-
-    public void setSubComentarios(List<Comentario> subComentarios) {
-        this.subComentarios = subComentarios;
-    }
-
     public Normal getNormal() {
         return normal;
     }
@@ -142,7 +129,7 @@ public class Comentario implements Serializable {
 
     @Override
     public String toString() {
-        return "Comentario{" + "id=" + id + ", fechaHora=" + fechaHora + ", contenido=" + contenido + ", comun=" + comun + ", comentarios=" + subComentarios + '}';
+        return "Comentario{" + "id=" + id + ", fechaHora=" + fechaHora + ", contenido=" + contenido + ", comun=" + comun + ", comentarios=" + '}';
     }
 
 }

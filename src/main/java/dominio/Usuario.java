@@ -5,11 +5,14 @@
  */
 package dominio;
 
+import dominio.enums.Genero;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -31,6 +34,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "usuarios")
+@DiscriminatorColumn(name = "tipousuario", discriminatorType = DiscriminatorType.STRING)
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Usuario implements Serializable {
 
@@ -52,10 +56,10 @@ public abstract class Usuario implements Serializable {
     protected String telefono;
     
     @Column(name = "avatar",nullable = false)
-    protected Byte[] avatar;
+    protected byte[] avatar;
     
     @ManyToOne(optional = false, targetEntity = Municipio.class)
-    @JoinColumn(name = "",nullable = false)
+    @JoinColumn(name = "idmunicipio",nullable = false)
     protected Municipio ciudad;
     
     @Column(name = "fechaNacimiento",nullable = false)
@@ -72,7 +76,7 @@ public abstract class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(String nombreCompleto, String email, String contrasenia, String telefono, Byte[] avatar, Municipio ciudad, Date fechaNacimiento, Genero genero, List<Comun> comunes) {
+    public Usuario(String nombreCompleto, String email, String contrasenia, String telefono, byte[] avatar, Municipio ciudad, Date fechaNacimiento, Genero genero, List<Comun> comunes) {
         this.nombreCompleto = nombreCompleto;
         this.email = email;
         this.contrasenia = contrasenia;
@@ -132,11 +136,11 @@ public abstract class Usuario implements Serializable {
         this.telefono = telefono;
     }
 
-    public Byte[] getAvatar() {
+    public byte[] getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(Byte[] avatar) {
+    public void setAvatar(byte[] avatar) {
         this.avatar = avatar;
     }
 
