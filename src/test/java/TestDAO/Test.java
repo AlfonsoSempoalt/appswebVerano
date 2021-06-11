@@ -13,11 +13,6 @@ import dominio.enums.Genero;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import repository.AdmorRepository;
-import repository.ComentarioRepository;
-import repository.EstadoRepository;
-import repository.NormalRepository;
-import repository.PostRepository;
 
 public class Test {
 
@@ -60,8 +55,7 @@ public class Test {
 //        Admor admin = new Admor(listaAnclados, nombreCompleto, email, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, listaComunes);
 //        
 //        admorDAO.guardar(admin);
-        
-        
+
     }
     
 }

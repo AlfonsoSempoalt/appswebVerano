@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 @Entity
 @DiscriminatorValue(value="admin")
 public class Admor extends Usuario implements Serializable {
-    
+
     @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
     private List<Anclado> anclados;
     
