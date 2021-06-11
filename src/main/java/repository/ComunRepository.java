@@ -10,7 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 /**
  *
@@ -39,6 +42,7 @@ public class ComunRepository extends BaseRepository<Comun> {
             comun.setFechaHoraCreacion(entidad.getFechaHoraCreacion());
             comun.setFechaHoraEdicion(entidad.getFechaHoraEdicion());
             comun.setTitulo(entidad.getTitulo());
+            comun.setUsuario(entidad.getUsuario());
             entityManager.merge(comun);
             entityManager.getTransaction().commit();
             entityManager.close();
@@ -53,10 +57,10 @@ public class ComunRepository extends BaseRepository<Comun> {
     public Comun buscarporID(long id) {
         EntityManager entityManager = this.createEntityManager();
         entityManager.getTransaction().begin();
-        Comun anclado = entityManager.find(Comun.class, id);
+        Comun comun = entityManager.find(Comun.class, id);
         entityManager.getTransaction().commit();
         entityManager.close();
-        return anclado;
+        return comun;
     }
 
     @Override
@@ -66,20 +70,41 @@ public class ComunRepository extends BaseRepository<Comun> {
         CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
         cq.select(cq.from(Comun.class));
         Query query = em.createQuery(cq);
-        ArrayList<Comun> comentarios = new ArrayList<>(query.getResultList());
+        ArrayList<Comun> comunes = new ArrayList<>(query.getResultList());
         em.getTransaction().commit();
         em.close();
-        return comentarios;
+        return comunes;
     }
 
     @Override
     public boolean eliminar(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = this.createEntityManager();
+        em.getTransaction().begin();
+        Comun comun = em.find(Comun.class, id);
+        if (comun != null) {
+            em.remove(comun);
+            em.getTransaction().commit();
+            em.close();
+            return true;
+        }
+        em.getTransaction().commit();
+        em.close();
+        return false;
     }
 
     @Override
     public List<Comun> buscarComo(String busqueda) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = this.createEntityManager();
+        em.getTransaction().begin();
+        CriteriaBuilder builder = em.getCriteriaBuilder();
+        CriteriaQuery<Comun> cq = builder.createQuery(Comun.class);
+        Root<Comun> root = cq.from(Comun.class);
+        cq = cq.select(root).where(builder.like(root.get("titulo"), "%" + busqueda + "%"));
+        TypedQuery<Comun> typedQuery = em.createQuery(cq);
+        ArrayList<Comun> comunes = new ArrayList<>(typedQuery.getResultList());
+        em.getTransaction().commit();
+        em.close();
+        return comunes;
     }
 
 }

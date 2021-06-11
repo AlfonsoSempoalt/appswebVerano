@@ -36,9 +36,9 @@ public class ComentarioRepository extends BaseRepository<Comentario> {
         EntityManager entityManager = this.createEntityManager();
         entityManager.getTransaction().begin();
         Comentario comentario = entityManager.find(Comentario.class, entidad.getId());
-        if (comentario != null) {
-            comentario.setContenido(entidad.getContenido());
+        if (comentario != null) {           
             comentario.setFechaHora(entidad.getFechaHora());
+            comentario.setContenido(entidad.getContenido());
             //comun es el post al que pertenece el comentario
             comentario.setComun(entidad.getComun());
             //normal es el usuario al que le pertenece el comentario
@@ -99,7 +99,7 @@ public class ComentarioRepository extends BaseRepository<Comentario> {
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<Comentario> cq = builder.createQuery(Comentario.class);
         Root<Comentario> root = cq.from(Comentario.class);
-        cq = cq.select(root).where(builder.like(root.get("nombreCompleto"), "%" + busqueda + "%"));
+        cq = cq.select(root).where(builder.like(root.get("contenido"), "%" + busqueda + "%"));
         TypedQuery<Comentario> typedQuery = em.createQuery(cq);
         ArrayList<Comentario> pedidos = new ArrayList<>(typedQuery.getResultList());
         em.getTransaction().commit();

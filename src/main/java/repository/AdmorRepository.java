@@ -95,10 +95,10 @@ public class AdmorRepository extends BaseRepository<Admor> {
         Root<Admor> root = cq.from(Admor.class);
         cq = cq.select(root).where(builder.like(root.get("nombreCompleto"), "%" + busqueda + "%"));
         TypedQuery<Admor> typedQuery = em.createQuery(cq);
-        ArrayList<Admor> pedidos = new ArrayList<>(typedQuery.getResultList());
+        ArrayList<Admor> admins = new ArrayList<>(typedQuery.getResultList());
         em.getTransaction().commit();
         em.close();
-        return pedidos;
+        return admins;
     }
 
 }

@@ -97,7 +97,7 @@ public class AncladoRepository extends BaseRepository<Anclado> {
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<Anclado> cq = builder.createQuery(Anclado.class);
         Root<Anclado> root = cq.from(Anclado.class);
-        cq = cq.select(root).where(builder.like(root.get("nombreCompleto"), "%" + busqueda + "%"));
+        cq = cq.select(root).where(builder.like(root.get("titulo"), "%" + busqueda + "%"));
         TypedQuery<Anclado> typedQuery = em.createQuery(cq);
         ArrayList<Anclado> pedidos = new ArrayList<>(typedQuery.getResultList());
         em.getTransaction().commit();

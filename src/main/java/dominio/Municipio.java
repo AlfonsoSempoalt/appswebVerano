@@ -74,6 +74,14 @@ public class Municipio implements Serializable {
         this.estado = estado;
     }
 
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -96,7 +104,7 @@ public class Municipio implements Serializable {
 
     @Override
     public String toString() {
-        return "Municipio{" + "idmunicipio=" + idmunicipio + ", nombre=" + nombre + ", estado=" + estado + '}';
+        return "Municipio{" + "idmunicipio=" + idmunicipio + ", nombre=" + nombre + ", estado=" + estado + ", usuarios=" + usuarios + '}';
     }
 
 }

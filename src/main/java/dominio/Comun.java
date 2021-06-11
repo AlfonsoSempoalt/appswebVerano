@@ -10,9 +10,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -31,7 +28,7 @@ public class Comun extends Post implements Serializable {
     private List<Comentario> comentarios;
     
     @ManyToOne(targetEntity = Usuario.class,optional = false)
-    @JoinColumn(name = "idusuario",nullable = false)
+    @JoinColumn(name = "idusuario", nullable = true)
     private Usuario usuario;
     
     public Comun() {
@@ -54,6 +51,14 @@ public class Comun extends Post implements Serializable {
         this.comentarios = comentarios;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    } 
+    
     @Override
     public int hashCode() {
         int hash = 0;
