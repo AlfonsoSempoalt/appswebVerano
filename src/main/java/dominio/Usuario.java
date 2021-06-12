@@ -55,7 +55,7 @@ public abstract class Usuario implements Serializable {
     @Column(name="telefono",nullable = false)
     protected String telefono;
     
-    @Column(name = "avatar",nullable = false)
+    @Column(name = "avatar",nullable = true)
     protected byte[] avatar;
     
     @ManyToOne(optional = false, targetEntity = Municipio.class)

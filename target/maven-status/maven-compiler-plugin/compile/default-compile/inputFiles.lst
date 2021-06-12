@@ -1,38 +1,38 @@
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlAdmor.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlComun.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Usuario.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\NormalRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\Fachada.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\ComentarioRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\AncladoRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlNormal.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\fabricas\FabricaUsuario.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\EstadoRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\ComunRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\BaseControl.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlAnclado.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlUsuario.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\fabricas\FabricaPost.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Post.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Comentario.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\Fachada.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\BaseRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlEstado.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\IFachada.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Admor.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Estado.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Comun.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlMunicipio.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlComentario.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\enums\Genero.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Normal.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\UsuarioRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\MunicipioRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Anclado.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\ControlPost.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\controles\IFachada.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\PostRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\enums\TiposPosts.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\Municipio.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dao\AdmorRepository.java
-C:\Users\Alfon\Desktop\proyectosTrabajando\appsWeb\appswebVerano\src\main\java\dominio\enums\TiposUsuarios.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlNormal.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Comun.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\EstadoRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlEstado.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\MunicipioRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\PostRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlUsuario.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\AncladoRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\Fachada.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\NormalRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\enums\Genero.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\IFachada.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\ComunRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Municipio.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\fabricas\FabricaUsuario.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlComun.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlComentario.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\BaseControl.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\enums\TiposPosts.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Comentario.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlAdmor.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\ComentarioRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\UsuarioRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Usuario.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlPost.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\enums\TiposUsuarios.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Estado.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlMunicipio.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\IFachada.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\ControlAnclado.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Normal.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\BaseRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Anclado.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dao\AdmorRepository.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\fabricas\FabricaPost.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Post.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\dominio\Admor.java
+D:\Programas\NetBeans Proyects\CapaDeNegocios1\appswebVerano\src\main\java\controles\Fachada.java

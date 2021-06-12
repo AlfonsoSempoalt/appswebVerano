@@ -28,7 +28,7 @@ public class Comun extends Post implements Serializable {
     private List<Comentario> comentarios;
     
     @ManyToOne(targetEntity = Usuario.class,optional = false)
-    @JoinColumn(name = "idusuario", nullable = true)
+    @JoinColumn(name = "idusuario", nullable = false)
     private Usuario usuario;
     
     public Comun() {

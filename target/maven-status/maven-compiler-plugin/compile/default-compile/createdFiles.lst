@@ -34,6 +34,7 @@ dao\UsuarioRepository.class
 controles\BaseControl.class
 controles\ControlComun$SingletonInstance.class
 dominio\Estado.class
+controles\Fachada$SingletonInstance.class
 dominio\enums\TiposPosts.class
 controles\ControlAnclado.class
 dao\NormalRepository.class
@@ -58,6 +59,7 @@ dao\PostRepository$1.class
 controles\ControlUsuario$1.class
 controles\ControlComentario$SingletonInstance.class
 dominio\Municipio.class
+controles\Fachada$1.class
 dao\EstadoRepository.class
 dominio\enums\TiposUsuarios.class
 controles\ControlMunicipio.class

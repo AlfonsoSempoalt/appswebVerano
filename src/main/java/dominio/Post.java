@@ -47,7 +47,7 @@ public class Post implements Serializable {
     @Column(name = "contenido", nullable = false)
     protected String contenido;
 
-    @Column(name = "fechaHoraEdicion", nullable = false)
+    @Column(name = "fechaHoraEdicion", nullable = true)
     @Temporal(TemporalType.TIMESTAMP)
     protected Date fechaHoraEdicion;
 
