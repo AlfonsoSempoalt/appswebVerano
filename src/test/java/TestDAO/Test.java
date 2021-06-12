@@ -1,5 +1,7 @@
 package TestDAO;
 
+import controles.Fachada;
+import controles.IFachada;
 import dominio.Admor;
 import dominio.Anclado;
 import dominio.Comentario;
@@ -16,9 +18,9 @@ import java.util.List;
 
 public class Test {
 
-    public static void main(String[] args) {         
-        
-//        PostRepository postDAO = new PostRepository();
+    public static void main(String[] args) {
+//        IFachada fachada = new Fachada();
+//
 //        Comun postComun = new Comun();
 //        postComun.setContenido("Venta y compra");
 //        postComun.setFechaHoraCreacion(new Date());
@@ -26,18 +28,15 @@ public class Test {
 //        postComun.setTitulo("MarketPlace");
 //        postComun.setComentarios(null);
 //        postComun.setUsuario(null);
-//        postDAO.guardar(postComun);
-        
-//          EstadoRepository estadoDAO = new EstadoRepository();
-//          
-//          List<Municipio> listaMunicipios = new ArrayList<>(); 
-//          
-//          Estado estado = new Estado();
-//          estado.setNombre("Sonora");
-//          Municipio municipio = new Municipio("Obregon", estado);
-//          listaMunicipios.add(municipio);
-//          estado.setMunicipios(listaMunicipios);
-//          estadoDAO.guardar(estado);
+//        fachada.guardarPost(postComun);
+
+//        List<Municipio> listaMunicipios = new ArrayList<>();
+//        Estado estado = new Estado();
+//        estado.setNombre("Sonora");
+//        Municipio municipio = new Municipio("Obregon", estado);
+//        listaMunicipios.add(municipio);
+//        estado.setMunicipios(listaMunicipios);
+//        fachada.guardarEstado(estado);
 
 //        AdmorRepository admorDAO = new AdmorRepository();
 //        
@@ -55,7 +54,6 @@ public class Test {
 //        Admor admin = new Admor(listaAnclados, nombreCompleto, email, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, listaComunes);
 //        
 //        admorDAO.guardar(admin);
-
     }
-    
+
 }

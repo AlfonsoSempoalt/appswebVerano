@@ -7,8 +7,6 @@ package dominio;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,6 +27,7 @@ import javax.persistence.TemporalType;
 public class Comentario implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    private static Comentario instance;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,24 +46,46 @@ public class Comentario implements Serializable {
     private Comun comun;
 
     @ManyToOne(targetEntity = Normal.class, optional = false)
-    @JoinColumn(name = "idusuario",nullable = false)
+    @JoinColumn(name = "idusuario", nullable = false)
     private Normal normal;
 
-    public Comentario() {
+    private Comentario() {
     }
 
-    public Comentario(Date fechaHora, String contenido, Comun comun, Normal normal) {
+    private Comentario(Date fechaHora, String contenido, Comun comun, Normal normal) {
         this.fechaHora = fechaHora;
         this.contenido = contenido;
         this.comun = comun;
         this.normal = normal;
     }
 
-    public Comentario(Long id, Date fechaHora, String contenido, Comun comun) {
+    private Comentario(Long id, Date fechaHora, String contenido, Comun comun, Normal normal) {
         this.id = id;
         this.fechaHora = fechaHora;
         this.contenido = contenido;
         this.comun = comun;
+        this.normal = normal;
+    }
+
+    public static Comentario getInstance() {
+        if (instance == null) {
+            instance = new Comentario();
+        }
+        return instance;
+    }
+    
+    public static Comentario getInstance(Date fechaHora, String contenido, Comun comun, Normal normal) {
+        if (instance == null) {
+            instance = new Comentario(fechaHora, contenido, comun, normal);
+        }
+        return instance;
+    }
+    
+    public static Comentario getInstance(Long id, Date fechaHora, String contenido, Comun comun, Normal normal) {
+        if (instance == null) {
+            instance = new Comentario(id, fechaHora, contenido, comun, normal);
+        }
+        return instance;
     }
 
     public Long getId() {

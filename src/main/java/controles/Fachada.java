@@ -6,6 +6,16 @@ import java.util.List;
 
 public class Fachada implements IFachada {
 
+    private Fachada() {
+    }
+
+    private static class SingletonInstance{
+        private final static Fachada facade = new Fachada();
+    }
+    public static Fachada getInstance(){
+        return SingletonInstance.facade;
+    }
+    
     private final ControlAdmor controlAdmor = ControlAdmor.getInstance();
     private final ControlAnclado controlAnclado = ControlAnclado.getInstance();
     private final ControlComentario controlComentario = ControlComentario.getInstance();
