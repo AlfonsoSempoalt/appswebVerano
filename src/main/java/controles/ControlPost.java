@@ -1,13 +1,13 @@
 package controles;
 
-import dao.Fachada;
+import dao.FabricaFachadaDAO;
 import dao.IFachada;
 import dominio.Post;
 
 import java.util.List;
 
 class ControlPost implements BaseControl<Post>{
-    private final IFachada fachada = Fachada.getInstance();
+    private final IFachada fachada = FabricaFachadaDAO.getInstance();
 
     private ControlPost() {
     }

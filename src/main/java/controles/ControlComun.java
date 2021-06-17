@@ -1,14 +1,14 @@
 package controles;
 
+import dao.FabricaFachadaDAO;
 import dominio.Comun;
-import dao.Fachada;
 import dao.IFachada;
 
 import java.util.List;
 
 class ControlComun implements BaseControl<Comun> {
 
-    private final IFachada fachada = Fachada.getInstance();
+    private final IFachada fachada = FabricaFachadaDAO.getInstance();
 
     private ControlComun() {
 

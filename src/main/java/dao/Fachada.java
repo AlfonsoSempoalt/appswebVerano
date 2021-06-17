@@ -7,15 +7,17 @@ import java.util.List;
 /**
  * @author Alfon
  */
-public class Fachada implements IFachada {
+class Fachada implements IFachada {
 
     private Fachada() {
     }
 
-    private static class SingletonInstance{
+    private static class SingletonInstance {
+
         private final static Fachada facade = new Fachada();
     }
-    public static Fachada getInstance(){
+
+    static Fachada getInstance() {
         return SingletonInstance.facade;
     }
 

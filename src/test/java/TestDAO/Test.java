@@ -1,7 +1,6 @@
 package TestDAO;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
-import controles.Fachada;
+import controles.FabricaFachadaControl;
 import controles.IFachada;
 import dominio.Admor;
 import dominio.Anclado;
@@ -22,7 +21,7 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        IFachada fachada = Fachada.getInstance();
+        IFachada fachada = FabricaFachadaControl.getInstance();
 //
 //        Comun postComun = new Comun();
 //        postComun.setContenido("Venta y compra");

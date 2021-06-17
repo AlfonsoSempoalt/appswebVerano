@@ -1,13 +1,13 @@
 package controles;
 
-import dao.Fachada;
+import dao.FabricaFachadaDAO;
 import dao.IFachada;
 import dominio.Usuario;
 
 import java.util.List;
 
 class ControlUsuario implements BaseControl<Usuario> {
-    private final IFachada fachada = Fachada.getInstance();
+    private final IFachada fachada = FabricaFachadaDAO.getInstance();
 
     private ControlUsuario() {
     }

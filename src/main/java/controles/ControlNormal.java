@@ -1,13 +1,13 @@
 package controles;
 
-import dao.Fachada;
+import dao.FabricaFachadaDAO;
 import dao.IFachada;
 import dominio.Normal;
 
 import java.util.List;
 
 class ControlNormal implements BaseControl<Normal> {
-    private final IFachada fachada = Fachada.getInstance();
+    private final IFachada fachada = FabricaFachadaDAO.getInstance();
 
     private ControlNormal() {
     }

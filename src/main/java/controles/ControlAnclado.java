@@ -1,14 +1,14 @@
 package controles;
 
+import dao.FabricaFachadaDAO;
 import dominio.Anclado;
-import dao.Fachada;
 import dao.IFachada;
 
 import java.util.List;
 
 class ControlAnclado implements BaseControl<Anclado> {
 
-    private final IFachada fachada = Fachada.getInstance();
+    private final IFachada fachada = FabricaFachadaDAO.getInstance();
 
     private ControlAnclado() {
 
